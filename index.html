@@ -7,7 +7,13 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ 
   
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Map</title>
   <style>
     body {
@@ -183,10 +189,7 @@ travel_maindiv p {
 .modal-body {
     text-align: center;
 }
-.ad{
-    background-color: blue
 
-}
 #mb{
     height: 10px;
     padding-right: 40px;
@@ -258,9 +261,19 @@ ul li a .icon .fa:last-child{
     }
 .myNavbar {
    background: white;
-   height: 70px;
+   height: 80px;
+   padding-bottom: 0px;
 }
-
+marquee {
+  font-size: 20px;
+background-color: aqua;
+}
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0px;
+    border: 1px solid transparent;
+}
   </style>
 </head>
 <body>
@@ -269,49 +282,67 @@ ul li a .icon .fa:last-child{
      
              
       
-      
-<ul>
 
-  <li>
-      <a href="#">
-          <div class="icon">
-              <i class="fa fa-home" aria-hidden="true"></i>
-              <i class="fa fa-home" aria-hidden="true"></i>
-          </div>
-          <div class="name" data-text="Home">Home</div>
-      </a>
-  </li>
+  <nav class="myNavbar navbar navbar-inverse navbar-fixed-top">
 
-  <li>
-      <a href="#">
-          <div class="icon">
-              <i class="fa fa-info-circle" aria-hidden="true"></i>
-              <i class="fa fa-info-circle" aria-hidden="true"></i>
-          </div>
-          <div class="name" data-text="Details">Details</div>
-      </a>
-  </li>
+       
 
-  <li>
-      <a href="#">
-          <div class="icon">
-              <i class="fa fa-map" aria-hidden="true"></i>
-              <i class="fa fa-map" aria-hidden="true"></i>
-          </div>
-          <div class="name" data-text="Map">Map</div>
-      </a>
-  </li>
-</ul>
-
-</div>
-
-<div class="ad" id="ihs">
-
-  <marquee width="100%" direction="right" height="10%" onmouseover="this.stop();" onmouseout="this.start();">
+           
+       
    
-      *** Feel free to ask any queries on info@ihgi.in ***
-  </marquee>
-</div>
+    <ul class="nav navbar-nav ">
+
+        <ul>
+
+            <li>
+                <a href="#">
+                    <div class="icon">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                    </div>
+                    <div class="name" data-text="Home">Home</div>
+                </a>
+            </li>
+        
+            <li>
+                <a href="#">
+                    <div class="icon">
+                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                    </div>
+                    <div class="name" data-text="Details">Details</div>
+                </a>
+            </li>
+        
+            <li>
+                <a href="#">
+                    <div class="icon">
+                        <i class="fa fa-map" aria-hidden="true"></i>
+                        <i class="fa fa-map" aria-hidden="true"></i>
+                    </div>
+                    <div class="name" data-text="Map">Map</div>
+                </a>
+            </li>
+        </ul>
+        
+
+    </ul>
+    
+
+
+
+
+
+</nav>
+
+
+
+
+
+  <marquee width="100%" direction="right" height="100%" >
+    This is a sample scrolling text that has scrolls texts to right.
+    </marquee>
+ 
 
   <div class="container">
     <div class="row">
@@ -613,14 +644,14 @@ function toggleBounce2() {
 
 
     function myFunction() {
-        var x = document.getElementById("myDIV");
-        if (x.innerHTML === "hide government hospitals") {
+        var x1 = document.getElementById("myDIV");
+        if (x1.innerHTML === "hide government hospitals") {
           console.log("adfi");
-          x.innerHTML = "show government hospitals";
+          x1.innerHTML = "show government hospitals";
           hideMarkers();
           
         } else {
-          x.innerHTML = "hide government hospitals";
+          x1.innerHTML = "hide government hospitals";
           showMarkers();
 
         }
@@ -640,93 +671,20 @@ function toggleBounce2() {
 
 
   </script>
+ 
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANiTE_1vR9FpERbsEwUB77u9JulBi_qXY&callback=initMap">
     </script>
- 
-
-    <div class="container ">
-      <div class="row">
-        <div class="col-sm-12 mr-auto ml-auto text-center">
-          <button id="myDIV" onclick="myFunction() " class="button">hide government hospitals</button>
-          <button id="myDIV2" onclick="myFunction2() , toggleBounce(); " class="button">hide private hospitals</button>
-        
-        </div>
-      </div>
-    </div>
+   <div class="container ">
+    <div class="row">
+      <div class="col-sm-12 mr-auto ml-auto text-center">
+        <button id="myDIV" onclick="myFunction() " class="button">hide government hospitals</button>
+        <button id="myDIV2" onclick="myFunction2() , toggleBounce(); " class="button">hide private hospitals</button>
       
-   <div id="accordion">
-    <div class="card">
-      <div class="card-header">
-        <a class="card-link" data-toggle="collapse" href="#collapseOne">
-          Collapsible Group Item #1
-        </a>
-      </div>
-      <div id="collapseOne" class="collapse show" data-parent="#accordion">
-        <div class="card-body">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-header">
-        <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
-        Collapsible Group Item #2
-      </a>
-      </div>
-      <div id="collapseTwo" class="collapse" data-parent="#accordion">
-        <div class="card-body">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-header">
-        <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
-          Collapsible Group Item #3
-        </a>
-      </div>
-      <div id="collapseThree" class="collapse" data-parent="#accordion">
-        <div class="card-body">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </div>
       </div>
     </div>
   </div>
 
-  <div class="card">
-    <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
-        Collapsible Group Item #3
-      </a>
-    </div>
-    <div id="collapseThree" class="collapse" data-parent="#accordion">
-      <div class="card-body">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-<div class="card">
-  <div class="card-header">
-    <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
-      what is 
-    </a>
-  </div>
-  <div id="collapseThree" class="collapse" data-parent="#accordion">
-    <div class="card-body">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    </div>
-  </div>
-</div>
-</div>
-</div>
-<div class="contaienr">
-  <div class="row">
-
-  </div>
-</div>
 <center>
 
     <iframe
@@ -739,5 +697,23 @@ function toggleBounce2() {
 
 </center>
 
+<div class="container">
+  <h2>Collapsible Panel</h2>
+  <p>Click on the collapsible panel to open and close it.</p>
+  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse1">Collapsible panel</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse">
+        <div class="panel-body">Panel Body</div>
+        <div class="panel-footer">Panel Footer</div>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
+
 </html>
