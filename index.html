@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Dekko' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Allan' rel='stylesheet'>
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative&display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
- 
   
+  
+  <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+  
+
+ 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Map</title>
   <style>
-    body {
 
-      background-image: url("2.jpg");
-    }
+
     #map{
       height:400px;
       width:100%;
@@ -82,7 +88,7 @@
   display: none;
   position: absolute;
   background-color: #f1f1f1;
-  min-width: 120px;
+  min-width: 128px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -203,7 +209,7 @@ body {
     margin:0;
     padding:0;
     font-family: sans-serif;
-    background: #e91e63;
+    background: #4DA8DA;
 }
 ul {
     position: absolute;
@@ -260,19 +266,46 @@ ul li a .icon .fa:last-child{
         transform: translateY(-100%);
     }
 .myNavbar {
-   background: white;
+   background: aqua;
    height: 80px;
    padding-bottom: 0px;
 }
 marquee {
-  font-size: 20px;
-background-color: aqua;
+font-size: 20px;
+background-color: #DDAF94;
 }
+
 .navbar {
     position: relative;
     min-height: 50px;
     margin-bottom: 0px;
     border: 1px solid transparent;
+}
+.adi {
+  font-family: 'Dekko';font-size: 23px;
+}
+#adi2 {
+  font-family: 'Allan';font-size: 23px;
+  color: #e91e63;
+}
+#ok {
+  background:  #e91e63;
+}
+#gg {
+  background:  #A3BCB6;
+}
+#contacts {
+  background: black;
+  width: 100%;
+  height: 40px;
+}
+#ok2{
+
+  text-align: right;
+
+}
+#ok3 {
+  color: #4DA8DA;
 }
   </style>
 </head>
@@ -283,7 +316,7 @@ background-color: aqua;
              
       
 
-  <nav class="myNavbar navbar navbar-inverse navbar-fixed-top">
+  <nav class="myNavbar navbar navbar-inverse navbar-fixed-top" >
 
        
 
@@ -295,27 +328,29 @@ background-color: aqua;
         <ul>
 
             <li>
-                <a href="#">
+                <a href="#contacts">
                     <div class="icon">
-                        <i class="fa fa-home" aria-hidden="true"></i>
-                        <i class="fa fa-home" aria-hidden="true"></i>
+                     
+                        <i class="fa fa-address-card " aria-hidden="true"></i>
+                        <i class="fa fa-address-card " aria-hidden="true"></i>
                     </div>
-                    <div class="name" data-text="Home">Home</div>
+                    <div class="name" data-text="Home">Contacts
+                    </div>
                 </a>
             </li>
         
             <li>
-                <a href="#">
+                <a href="#faqs">
                     <div class="icon">
                         <i class="fa fa-info-circle" aria-hidden="true"></i>
                         <i class="fa fa-info-circle" aria-hidden="true"></i>
                     </div>
-                    <div class="name" data-text="Details">Details</div>
+                    <div class="name" data-text="Details">FAQ's</div>
                 </a>
             </li>
         
             <li>
-                <a href="#">
+                <a href="#map2">
                     <div class="icon">
                         <i class="fa fa-map" aria-hidden="true"></i>
                         <i class="fa fa-map" aria-hidden="true"></i>
@@ -339,12 +374,12 @@ background-color: aqua;
 
 
 
-  <marquee width="100%" direction="right" height="100%" >
+  <marquee width="100%" direction="right" height="100%" id="gg" >
     This is a sample scrolling text that has scrolls texts to right.
     </marquee>
  
 
-  <div class="container">
+  <div class="container" id="map2">
     <div class="row">
     <div class="col-sm-9 ml-auto text-center ">
       <h3 id="demo">  SELECT YOUR district</h3>  
@@ -369,14 +404,16 @@ background-color: aqua;
     </div>
     </div>
   <div id="map"></div>
-  <script>
+  
+
+ <script>
     let map;
     var infobj = [];
     markers = [];
     let markers2 =[];
     function initMap() {
-  const haightAshbury = { lat:31.32,lng:75.57 };
-
+//  const haightAshbury = { lat: 59.327, lng: 18.067 };
+ const haightAshbury = {lat:31.33407500023273,lng:75.56336955653758};
   map = new google.maps.Map(document.getElementById("map"), {
     zoom: 12,
     center: haightAshbury,
@@ -413,8 +450,8 @@ background-color: aqua;
 
    
   // Adds a marker at the center of the map.
-  addMarker(haightAshbury);
 
+    
  /* marker.addListener('click', function(){
                 closeotherinfo();
                 infoWindow.open(marker.get('map'), marker);
@@ -424,13 +461,12 @@ background-color: aqua;
 
 
 // Adds a marker to the map and push to the array.
-function addMarker(position) {
-  const marker = new google.maps.Marker({
-    position:{lat:31.32627918476003,lng:75.57304470754647},
-            
-            map:map,
+  marker = new google.maps.Marker({
+    position:{lat:31.32627918476003,lng:75.57304470754647}, 
+            map,
             animation: google.maps.Animation.DROP,
-      
+          
+    animation: google.maps.Animation.DROP,
             title: "Click to zoom",
           
   });
@@ -445,7 +481,7 @@ function addMarker(position) {
     
     "</div>" +
     "</div>";
-
+   
   var infoWindow = new google.maps.InfoWindow({
             content:contentString,
             
@@ -463,7 +499,7 @@ function addMarker(position) {
   markers.push(marker);
 
 
-  const marker4 = new google.maps.Marker({
+   marker4 = new google.maps.Marker({
     position:{lat:31.316550741235833,lng:75.578218082312},
             
             map:map,
@@ -484,13 +520,13 @@ function addMarker(position) {
     "</div>" +
     "</div>";
 
-  var infoWindow = new google.maps.InfoWindow({
-            content:contentString,
+  var infoWindow4 = new google.maps.InfoWindow({
+            content:contentString4,
             
           });
    
           marker4.addListener('click', function(){
-            infoWindow.open(map, marker4);
+            infoWindow4.open(map, marker4);
           });
           marker4.addListener("click", () => {
     map.setZoom(18);
@@ -500,7 +536,7 @@ function addMarker(position) {
     
   markers.push(marker4);
 
-  const marker2 = new google.maps.Marker({
+  marker2 = new google.maps.Marker({
     animation: google.maps.Animation.DROP,
     position:{lat:31.330685700749573,lng:75.58732922708975},
 
@@ -537,7 +573,7 @@ function addMarker(position) {
 
     markers2.push(marker2);
 
-    const marker3 = new google.maps.Marker({
+     marker3 = new google.maps.Marker({
     position:{lat:31.33407500023273,lng:75.56336955653758},
     animation: google.maps.Animation.DROP,
             map:map,
@@ -571,12 +607,42 @@ function addMarker(position) {
     });
     markers2.push(marker3);
 
-   
-  }
+    marker5 = new google.maps.Marker({
+    map,
+    animation: google.maps.Animation.DROP,
+    position: { lat: 59.327, lng: 18.067 },
+  });
 }
 
 
 
+
+function toggleBounce() {
+  if (marker.getAnimation() !== null) {
+    marker.setAnimation(null);
+    marker4.setAnimation(null);
+  } else {
+      marker.setAnimation(google.maps.Animation.BOUNCE);
+    setTimeout(function(){ marker.setAnimation(null); }, 1500);
+    marker4.setAnimation(google.maps.Animation.BOUNCE);
+    setTimeout(function(){ marker4.setAnimation(null); }, 1500);
+  }
+
+}
+
+
+function toggleBounce2() {
+  if (marker.getAnimation() !== null) {
+    marker2.setAnimation(null);
+    marker3.setAnimation(null);
+  } else {
+      marker2.setAnimation(google.maps.Animation.BOUNCE);
+    setTimeout(function(){ marker2.setAnimation(null); }, 1500);
+    marker3.setAnimation(google.maps.Animation.BOUNCE);
+    setTimeout(function(){ marker3.setAnimation(null); }, 1500);
+  }
+
+}
 
 
 // Sets the map on all markers in the array.
@@ -619,25 +685,8 @@ function showMarkers() {
 
 // Deletes all markers in the array by removing references to them.
 
-function toggleBounce() {
-  if (markers.getAnimation() !== null) {
-    markers.setAnimation(null);
-  } else {
-      markers.setAnimation(google.maps.Animation.BOUNCE);
-    setTimeout(function(){ markers.setAnimation(null); }, 1600);
-  }
 
-}
 
-function toggleBounce2() {
-  if (markers2.getAnimation() !== null) {
-    markers2.setAnimation(null);
-  } else {
-      markers2.setAnimation(google.maps.Animation.BOUNCE);
-    setTimeout(function(){ markers2.setAnimation(null); }, 1600);
-  }
-
-}
 
 
 
@@ -646,21 +695,21 @@ function toggleBounce2() {
     function myFunction() {
         var x1 = document.getElementById("myDIV");
         if (x1.innerHTML === "hide government hospitals") {
-          console.log("adfi");
+          console.log("1");
+          toggleBounce2();
           x1.innerHTML = "show government hospitals";
           hideMarkers();
-          
         } else {
           x1.innerHTML = "hide government hospitals";
           showMarkers();
-
         }
       }
 
       function myFunction2() {
         var x = document.getElementById("myDIV2");
         if (x.innerHTML === "hide private hospitals") {
-          console.log("adfi");
+          console.log("2");
+          toggleBounce();
           x.innerHTML = "show private hospitals";
           hideMarkers2();
         } else {
@@ -671,49 +720,77 @@ function toggleBounce2() {
 
 
   </script>
- 
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANiTE_1vR9FpERbsEwUB77u9JulBi_qXY&callback=initMap">
     </script>
-   <div class="container ">
+     <br>
+     <br> <br>
+     
+   <div class="container" >
     <div class="row">
-      <div class="col-sm-12 mr-auto ml-auto text-center">
-        <button id="myDIV" onclick="myFunction() " class="button">hide government hospitals</button>
-        <button id="myDIV2" onclick="myFunction2() , toggleBounce(); " class="button">hide private hospitals</button>
+      <div class="col-sm-12  text-center">
+  <button id="myDIV" onclick="myFunction() " class="button ">hide government hospitals</button>
+  <button id="myDIV2" onclick="myFunction2() " class="button">hide private hospitals</button>
       
       </div>
     </div>
   </div>
-
-<center>
-
-    <iframe
-    allow="microphone;"
-    width="100%"
-    height="550px"
-    src="https://console.dialogflow.com/api-client/demo/embedded/53dedfcc-acc5-43a9-a8f8-d0f15ab33140">
-</iframe>
-
-
-</center>
-
-<div class="container">
-  <h2>Collapsible Panel</h2>
-  <p>Click on the collapsible panel to open and close it.</p>
-  <div class="panel-group">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" href="#collapse1">Collapsible panel</a>
-        </h4>
+  <br>
+  <br>
+  <br>
+  <div class="container" id="faqs">
+  
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+        <marquee behavior="" direction="up" height="100%" > <h1 id="adi2"> Which vaccine is the best</h1> <h1 class="adi"> There are basically three types of vaccine available for covid
+          <br>
+          1. TRADITIONAL VACCINE 
+        <br>
+        Like COVAXIN
+        <br>
+           IN this type of vaccine dead or attenuated corona virus is injected in to your body.Dead means the virus which do not have capability to replicate.
+          <br> 
+           2. RECOMBINANT DNA VACCINE.
+           <br>
+           EXAMPLE COVISHIELD OR SPUTNIK 
+           <br>
+          In COVISHIELD in the DNA of chimpanzee ADENOVIRUS gene which have the capability to produce spike protein taken from genome of corona virus.
+          Know this modified DNA of Adenovirus have capability to produce spike proteins just like corona virus.
+          As our body makes antibodies against spike protein of corona virus.
+         
+         <br> 3. LIPID NANO PARTICLE BASED VACCINE.
+         <br> 
+           EXAMPLE PFIZER MODERNA 
+           <br>
+          In this type of vaccine mRNA having information to make spike protein is packed in lipid particle.In this type of vaccine no virus is injected in to our body.Inside our cell mRNA uses our ribosome endoplasmic reticulum and Golgi apparatus to make spike protien against which antibodies are formed
+      </h1>
+        </marquee>
+        <h1 class="adi"></h1>  <h1 class="adi"></h1>
       </div>
-      <div id="collapse1" class="panel-collapse collapse">
-        <div class="panel-body">Panel Body</div>
-        <div class="panel-footer">Panel Footer</div>
+          <div class=" col-lg-4  col-lg-8 col-sm-12 col-xs-12">
+        <iframe
+        allow="microphone;"
+        width="100%"
+        height="500px"
+        src="https://console.dialogflow.com/api-client/demo/embedded/53dedfcc-acc5-43a9-a8f8-d0f15ab33140">
+    </iframe>
       </div>
+
     </div>
   </div>
+
+
+  <div id="contacts">
+<h5 id="ok3">© Copyright</h5>
+    <a href="mailto:adityaverma0847@gmail.com?Subject=Hi">
+       <h5 id="ok2"><i class="fa fa-envelope"></i>&nbsp;&nbsp;adityaverma0847@gmail.com</h5>
+    </a>
+  
 </div>
+
+
+
+ 
 </body>
 
-</html>
